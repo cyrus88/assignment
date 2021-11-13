@@ -51,14 +51,6 @@ class HomeActivity : AppCompatActivity() {
             )
         )
         binding.recycleViewNetworkData.adapter = networkDataAdapter
-        networkDataAdapter.onItemClick = { user ->
-
-            // open bottom sheet
-            val bottomSheetFragment =
-                HomeDetailFragment(user)
-            bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
-        }
-
     }
 
     private fun callApiAndUpdateUI() {
