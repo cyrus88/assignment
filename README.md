@@ -11,10 +11,6 @@ User List displayed in list view.
 Each entry in the list is composite view.
 
 
-#### Display a clickable image
-Each entry of row is clickable and showing all user detail.
-
-
 -------------------------------------------------
 
 ### Technology :

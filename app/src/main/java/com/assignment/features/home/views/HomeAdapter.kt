@@ -16,9 +16,6 @@ import javax.inject.Inject
 class HomeAdapter @Inject constructor(): RecyclerView.Adapter<HomeAdapter.NetworkDataViewHolder>() {
 
     private var networkDataList = mutableListOf<Users>()
-
-    var onItemClick: ((recordList: Users) -> Unit)? = null
-
     private var context: Context? = null
     private var layoutInflater: LayoutInflater? = null
 
@@ -42,14 +39,12 @@ class HomeAdapter @Inject constructor(): RecyclerView.Adapter<HomeAdapter.Networ
 
 
     override fun onBindViewHolder(holder: NetworkDataViewHolder, position: Int) {
-        holder.tvLayoutName.text = networkDataList[position].name
+        val item = networkDataList[position]
+        holder.tvLayoutName.text = item.name
         context?.let { it ->
             holder.ivUserImage.let { it1 ->
-                Glide.with(it).load(networkDataList[position].image).into(it1)
+                Glide.with(it).load(item.image).into(it1)
             }
-        }
-        holder.viewHolder.setOnClickListener {
-            onItemClick?.invoke(networkDataList[position])
         }
     }
 
@@ -61,6 +56,5 @@ class HomeAdapter @Inject constructor(): RecyclerView.Adapter<HomeAdapter.Networ
     class NetworkDataViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvLayoutName:TextView = view.findViewById(R.id.tvLayoutName)
         val ivUserImage:ImageView = view.findViewById(R.id.ivUserImage)
-        val viewHolder = view
     }
 }
