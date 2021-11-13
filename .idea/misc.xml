@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_close.xml" value="0.10520833333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dialoge_user_data_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_user_list.xml" value="0.1" />
       </map>
