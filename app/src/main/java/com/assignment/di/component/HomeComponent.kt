@@ -12,6 +12,7 @@ interface HomeComponent {
         fun create(): HomeComponent
     }
 
-    // Classes that can be injected by this Component
-    fun inject(homeActivity: HomeActivity)
+    // This tells Dagger that LoginActivity requests injection so the graph needs to
+    // satisfy all the dependencies of the fields that LoginActivity is injecting.
+   fun inject(homeActivity: HomeActivity)
 }

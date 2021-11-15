@@ -34,6 +34,7 @@ class HomeActivity : AppCompatActivity() {
             .homeComponent().create()
         // Injects this activity to the just created home component
         animeComponent.inject(this)
+        // Now HomeActivityViewModel & HomeAdapter is available
 
         super.onCreate(savedInstanceState)
         binding = setContentView(this, R.layout.activity_home)
